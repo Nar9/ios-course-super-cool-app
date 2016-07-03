@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-dr-hYO">
+                                <rect key="frame" x="-133" y="-186" width="794" height="945"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boom-App" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-bt-EWP">
+                                <rect key="frame" x="140.5" y="0.0" width="320" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="kuO-QD-PYj"/>
+                                    <constraint firstAttribute="width" constant="320" id="spw-xA-31v"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrG-si-U8a">
+                                <rect key="frame" x="213.5" y="285" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="9cB-GP-4Kr"/>
+                                    <constraint firstAttribute="height" constant="30" id="m2X-XV-HqV"/>
+                                </constraints>
+                                <state key="normal" title="Make Me Super Cool!"/>
+                                <connections>
+                                    <action selector="makeMeNotSoUncool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8K-DZ-z2Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EZ7-bt-EWP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fz1-qH-yDl"/>
+                            <constraint firstItem="NrG-si-U8a" firstAttribute="top" secondItem="EZ7-bt-EWP" secondAttribute="bottom" constant="111" id="Q3a-M7-Knj"/>
+                            <constraint firstItem="EZ7-bt-EWP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="cMC-U6-yZg"/>
+                            <constraint firstItem="NrG-si-U8a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fpu-DJ-wlW"/>
+                            <constraint firstItem="NrG-si-U8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wNy-Y8-GeC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coolBg" destination="wl3-dr-hYO" id="PRQ-SZ-GP1"/>
+                        <outlet property="coolLogo" destination="EZ7-bt-EWP" id="216-Eo-xch"/>
+                        <outlet property="uncoolButton" destination="NrG-si-U8a" id="ncR-qQ-UNW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boom-App" width="554" height="110"/>
+        <image name="background" width="1667" height="1667"/>
+    </resources>
+</document>
